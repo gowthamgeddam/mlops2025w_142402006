@@ -1,0 +1,16 @@
+10c10,20
+< echo "sum of firsr $n numbers: $total "
+\ No newline at end of file
+---
+> echo "sum of firsr $n numbers: $total "
+> 
+> echo "Factorial Calc"
+> read -p "Enter n for n!: " n
+> factorial=1
+> for (( i=1; i<=n; i++ ))
+> do
+>   factorial=$((factorial * i))
+> done
+> 
+> echo "Factorial of $n: $n! = $factorial"
+\ No newline at end of file
