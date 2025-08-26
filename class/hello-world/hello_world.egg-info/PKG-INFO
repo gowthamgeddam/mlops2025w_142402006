@@ -1,3 +1,11 @@
+Metadata-Version: 2.4
+Name: hello-world
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: flask>=3.1.2
+
 Hello World
  
 # Project Structure
@@ -57,25 +65,4 @@ hello-world 0.1.0
  
 `uv build`  
  
-```
-
-.
-├── dist
-│   ├── hello_world-0.1.0-py3-none-any.whl
-│   └── hello_world-0.1.0.tar.gz
-├── example.py
-├── hello_world.egg-info
-│   ├── dependency_links.txt
-│   ├── PKG-INFO
-│   ├── requires.txt
-│   ├── SOURCES.txt
-│   └── top_level.txt
-├── main.py
-├── __pycache__
-│   └── app.cpython-39.pyc
-├── pyproject.toml
-├── README.md
-└── uv.lock
-
-3 directories, 13 files
 ```
