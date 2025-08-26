@@ -1,6 +1,7 @@
 Hello World
  
 # Project Structure
+
 .
 ├── main.py
 ├── pyproject.toml
@@ -35,3 +36,19 @@ Hello World
     └── pyvenv.cfg
 
 7 directories, 24 files
+ 
+## Managing version
+
+`uv version`  
+hello-world 0.1.0  
+
+`uv version --short`  
+0.1.0  
+
+`uv version --output-format json`  
+
+{
+  "package_name": "hello-world",
+  "version": "0.1.0",
+  "commit_info": null
+}
