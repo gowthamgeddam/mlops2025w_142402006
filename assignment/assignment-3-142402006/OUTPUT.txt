@@ -1,0 +1,45 @@
+
+--- a. Model Inference Outputs ---
+resnet34 Predictions: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+resnet50 Predictions: [1, 9, 1, 9, 9, 1, 1, 1, 2, 0, 1, 1, 9, 0, 1, 9, 9, 1, 1, 6, 9, 2, 1, 1, 9, 2, 9, 9, 9, 2, 9, 1]
+resnet101 Predictions: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+resnet152 Predictions: [6, 1, 1, 9, 6, 3, 1, 6, 3, 9, 9, 9, 5, 7, 9, 9, 2, 7, 6, 6, 7, 9, 6, 9, 9, 6, 6, 9, 9, 6, 6, 6]
+
+--- b. Data & Model JSON ---
+{
+    "data": {
+        "train_path": "data/train",
+        "val_path": "data/val",
+        "batch_size": 32,
+        "num_workers": 4
+    },
+    "models": {
+        "resnet34": {
+            "pretrained": true
+        },
+        "resnet50": {
+            "pretrained": true
+        },
+        "resnet101": {
+            "pretrained": true
+        },
+        "resnet152": {
+            "pretrained": true
+        }
+    }
+}
+
+--- c. Model Hyperparameters TOML ---
+[resnet34] learning_rate=0.01, optimizer=adam, momentum=0.9
+[resnet50] learning_rate=0.001, optimizer=sgd, momentum=0.5
+[resnet101] learning_rate=0.01, optimizer=adam, momentum=0.9
+[resnet152] learning_rate=0.001, optimizer=sgd, momentum=0.9
+
+--- d. Integrated Pipeline ---
+Training resnet34 with lr=0.01, optimizer=adam, momentum=0.9
+Training resnet50 with lr=0.001, optimizer=sgd, momentum=0.5
+Training resnet101 with lr=0.01, optimizer=adam, momentum=0.9
+Training resnet152 with lr=0.001, optimizer=sgd, momentum=0.9
+
+--- e. Grid search for ResNet34 ---
+Best hyperparameters for resnet34: {'learning_rate': 0.01, 'optimizer': 'adam', 'momentum': 0.9}, Accuracy: 0.4400
