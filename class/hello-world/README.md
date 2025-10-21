@@ -2,6 +2,7 @@ Hello World
  
 # Project Structure
 
+```
 .
 ├── main.py
 ├── pyproject.toml
@@ -36,6 +37,7 @@ Hello World
     └── pyvenv.cfg
 
 7 directories, 24 files
+```
  
 ## Managing version
 
