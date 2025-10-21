@@ -70,7 +70,7 @@ def calculate_metrics(y_true, y_pred):
 def train_random_forest(X_train, y_train, X_test, y_test, **params):
     """Train Random Forest model with MLflow tracking"""
 
-    with mlflow.start_run(run_name="Random Forest Classifier") as run:
+    with mlflow.start_run(run_name="Random Forest Classifier", nested=True) as run:
         # Log parameters
         mlflow.log_params(params)
         mlflow.log_param("model_type", "RandomForestClassifier")
@@ -138,7 +138,7 @@ def train_random_forest(X_train, y_train, X_test, y_test, **params):
 def train_logistic_regression(X_train, y_train, X_test, y_test, **params):
     """Train Logistic Regression model with MLflow tracking"""
 
-    with mlflow.start_run(run_name="Logistic Regression") as run:
+    with mlflow.start_run(run_name="Logistic Regression", nested=True) as run:
         # Log parameters
         mlflow.log_params(params)
         mlflow.log_param("model_type", "LogisticRegression")
