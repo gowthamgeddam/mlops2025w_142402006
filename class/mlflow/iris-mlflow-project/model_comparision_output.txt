@@ -1,0 +1,33 @@
+Model Comparison Results:
+================================================================================
+                          run_id                      run_name             model_type  test_accuracy  test_f1_score   status
+59021fac57274d5aa46b3c1c37254a45           Logistic Regression     LogisticRegression       1.000000       1.000000 FINISHED
+6ddd3fed2b17477a803ca7da9d017603           Logistic Regression     LogisticRegression       1.000000       1.000000 FINISHED
+327a71c4b8d24a4e955b339828a21894      Random Forest Classifier RandomForestClassifier       0.966667       0.966583 FINISHED
+4f6082c7b0dd46bbac7c6c748644a90b      Random Forest Classifier RandomForestClassifier       0.966667       0.966583 FINISHED
+a52c97324fb541f6832e7d9670fdf37e           Logistic Regression     LogisticRegression       0.933333       0.933333 FINISHED
+5971ab59bc89416f806f82838d32edd7           Logistic Regression     LogisticRegression       0.933333       0.933333 FINISHED
+97cde745e90e4ac7a6b54565f41d3a82      Random Forest Classifier RandomForestClassifier       0.933333       0.933333 FINISHED
+b619eef22f9a4f71b1251401f8c66011      Random Forest Classifier RandomForestClassifier       0.933333       0.933333 FINISHED
+bf4568383d0342bbb396878d558e2397      Random Forest Classifier RandomForestClassifier       0.900000       0.899749 FINISHED
+506f593464bd4e8a96f7dce6dcc67323      Random Forest Classifier RandomForestClassifier       0.900000       0.899749 FINISHED
+c746948d50584535b64362a8d4ccf971      Random Forest Classifier RandomForestClassifier       0.900000       0.899749 FINISHED
+6992bb5daffc4688ad57ebf4caff8f61      Random Forest Classifier RandomForestClassifier       0.900000       0.899749 FINISHED
+3bb3d52aa52146c99d62b51b24e7d5e3           Logistic Regression     LogisticRegression       0.866667       0.865320 FINISHED
+af9b313e4ecd472984e31af8eec91544           Logistic Regression     LogisticRegression       0.866667       0.865320 FINISHED
+aee4c468d7204a73b06e97761769d546     RF_estimators_100_depth_5                Unknown       0.000000       0.000000 FINISHED
+dbd02727edb740118197b10cc8174c8b      RF_estimators_50_depth_3                Unknown       0.000000       0.000000 FINISHED
+ba5c289135dd43d38768bfa4e8fadead     RF_estimators_200_depth_7                Unknown       0.000000       0.000000 FINISHED
+8e73b9798be745db9673039fb406de2b  RF_estimators_100_depth_None                Unknown       0.000000       0.000000 FINISHED
+2b052afd6dca4ac091b105dbe1123e6e                      LR_C_0.1                Unknown       0.000000       0.000000 FINISHED
+d43a88e2f1f14ee28314f16eb3f6e915                     LR_C_10.0                Unknown       0.000000       0.000000 FINISHED
+9a347c43070948ea9520f2292a3b8262                      LR_C_1.0                Unknown       0.000000       0.000000 FINISHED
+fde47efb1b774523b4829389cc0abfd5                      LR_C_1.0                Unknown       0.000000       0.000000 FINISHED
+dab2ef9059d54161aaa916fc17fca488                     LR_C_10.0                Unknown       0.000000       0.000000 FINISHED
+17564352b121453f86c961ba6ce6e054 Hyperparameter Tuning Session                Unknown       0.000000       0.000000 FINISHED
+cd5eac8d082e42f49434a03f719d9cd2      RF_estimators_50_depth_3                Unknown       0.000000       0.000000 FINISHED
+53fe572941e146e28ca8467461c03cac     RF_estimators_100_depth_5                Unknown       0.000000       0.000000 FINISHED
+b3c13a177c824f87b370eb0288785224     RF_estimators_200_depth_7                Unknown       0.000000       0.000000 FINISHED
+5eff89e4d91744159bb64d560d2b2132  RF_estimators_100_depth_None                Unknown       0.000000       0.000000 FINISHED
+5fb851a0aa174a75bcfcb388a8b66c3c                      LR_C_0.1                Unknown       0.000000       0.000000 FINISHED
+a28751ca69b64dd4956b0244fd217180 Hyperparameter Tuning Session                Unknown       0.000000       0.000000 FINISHED
