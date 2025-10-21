@@ -133,7 +133,9 @@ def train_random_forest(X_train, y_train, X_test, y_test, **params):
         mlflow.set_tag("dataset", "iris")
 
         print(f"Random Forest - Test Accuracy: {test_metrics['accuracy']:.4f}")
-        return model, test_metrics['accuracy']
+        run_id = mlflow.active_run().info.run_id
+        return model, test_metrics['accuracy'], run_id
+
 
 def train_logistic_regression(X_train, y_train, X_test, y_test, **params):
     """Train Logistic Regression model with MLflow tracking"""
@@ -193,7 +195,8 @@ def train_logistic_regression(X_train, y_train, X_test, y_test, **params):
         mlflow.set_tag("dataset", "iris")
         
         print(f"Logistic Regression - Test Accuracy: {test_metrics['accuracy']:.4f}")
-        return model, test_metrics['accuracy']
+        run_id = mlflow.active_run().info.run_id
+        return model, test_metrics['accuracy'], run_id
 
 def hyperparameter_tuning():
     """Perform hyperparameter tuning with nested runs"""
@@ -221,11 +224,11 @@ def hyperparameter_tuning():
         # Train Random Forest variants
         for params in rf_params:
             with mlflow.start_run(nested=True, run_name=f"RF_estimators_{params['n_estimators']}_depth_{params['max_depth']}"):
-                model, accuracy = train_random_forest(X_train, y_train, X_test, y_test, **params)
+                model, accuracy, curr_run_id = train_random_forest(X_train, y_train, X_test, y_test, **params)
                 if accuracy > best_accuracy:
                     best_accuracy = accuracy
                     best_model = model
-                    best_run_id = mlflow.active_run().info.run_id
+                    best_run_id = curr_run_id
 
         # Logistic Regression hyperparameter combinations
         lr_params = [
@@ -237,11 +240,11 @@ def hyperparameter_tuning():
         # Train Logistic Regression variants
         for params in lr_params:
             with mlflow.start_run(nested=True, run_name=f"LR_C_{params['C']}"):
-                model, accuracy = train_logistic_regression(X_train, y_train, X_test, y_test, **params)
+                model, accuracy, curr_run_id = train_logistic_regression(X_train, y_train, X_test, y_test, **params)
                 if accuracy > best_accuracy:
                     best_accuracy = accuracy
                     best_model = model
-                    best_run_id = mlflow.active_run().info.run_id
+                    best_run_id = curr_run_id
 
         # Log best model information in parent run
         mlflow.log_metric("best_accuracy", best_accuracy)
